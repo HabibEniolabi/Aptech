@@ -1,6 +1,6 @@
 export const releases = [
   {
-    image: "/images/morayo.webp",
+    image: "/public/images/morayo.webp",
     alt: "Morayo",
     description: "THE NEW ALBUM",
     title: "MORAYO",
@@ -12,7 +12,7 @@ export const releases = [
     ],
   },
   {
-    image: "/images/kese-dance.webp",
+    image: "/public/images/kese-dance.webp",
     alt: "Kese Dance",
     description: "THE NEWEST SINGLE",
     title: "KESE (DANCE)",
@@ -24,7 +24,7 @@ export const releases = [
     ],
   },
   {
-    image: "/images/Piece_of_my_Heart.webp",
+    image: "/public/images/Piece_of_my_Heart.webp",
     alt: "Piece of my Heart",
     description: "Piece of my Heart",
     title: "feat. brent faiyaz",
