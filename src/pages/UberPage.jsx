@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 
-const WizkidFanPage = () => {
+const UberPage = () => {
   return (
     <main className="w-full">
       <Navbar />
@@ -13,4 +13,4 @@ const WizkidFanPage = () => {
   );
 };
 
-export default WizkidFanPage;
+export default UberPage;
