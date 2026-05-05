@@ -1,8 +1,17 @@
 import { ChevronDown, Clock3, MapPin, Navigation } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import uber from "../assets/images/uber.png";
 
 const HeroSection = () => {
+  const [pickupLocation, setPickupLocation] = useState("");
+  const [dropOffLocation, setDropOffLocation] = useState(""); 
+
+  function handlePick() {
+    alert("You're about to be picked Up from your location")
+  }
+  function handleDrop() {
+    alert("Destination set to be drop off")
+  }
   return (
     <section className="flex items-center justify-between">
       <div className="flex w-1/2 max-w-[560px] flex-col gap-6">
@@ -41,6 +50,9 @@ const HeroSection = () => {
 
               <input
                 type="text"
+                value={pickupLocation}
+                onChange={setPickupLocation}
+                onClick={handlePick}
                 placeholder="Pickup location"
                 className="w-full bg-transparent pr-12 text-[20px] text-black placeholder:text-black/60 focus:outline-none"
               />
@@ -59,6 +71,9 @@ const HeroSection = () => {
 
               <input
                 type="text"
+                value={dropOffLocation}
+                onChange={setDropOffLocation}
+                onClick={handleDrop}
                 placeholder="Dropoff location"
                 className="w-full bg-transparent text-[20px] text-black placeholder:text-black/60 focus:outline-none"
               />
