@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
+import Crud from "../components/Crud";
 
 const UberPage = () => {
   return (
@@ -8,6 +9,7 @@ const UberPage = () => {
       <Navbar />
       <div className="px-10 py-12">
         <HeroSection />
+        <Crud />
       </div>
     </main>
   );
