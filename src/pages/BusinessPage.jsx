@@ -20,6 +20,25 @@ const BusinessPage = () => {
     },
   ];
 
+  const features = [
+    {
+      title: "Ride Management",
+      desc: "Manage all your company rides in one place",
+    },
+    {
+      title: "Expense Reports",
+      desc: "Automated expense tracking and reporting",
+    },
+    {
+      title: "Budget Controls",
+      desc: "Set spending limits and manage budgets",
+    },
+    {
+      title: "Analytics",
+      desc: "Get insights into your mobility spending",
+    },
+  ];
+
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
@@ -38,7 +57,9 @@ const BusinessPage = () => {
               </div>
 
               <p className="text-lg text-white/60 max-w-xl leading-relaxed">
-                Simplify your company's transportation with Uber's business solutions. Get volume discounts, expense tracking, and dedicated support.
+                Simplify your company's transportation with Uber's business
+                solutions. Get volume discounts, expense tracking, and dedicated
+                support.
               </p>
 
               <button className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
@@ -57,7 +78,9 @@ const BusinessPage = () => {
       {/* Benefits Section */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-5xl font-black text-center mb-16">Business Solutions</h2>
+          <h2 className="text-5xl font-black text-center mb-16">
+            Business Solutions
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
@@ -85,24 +108,7 @@ const BusinessPage = () => {
           <h2 className="text-5xl font-black text-center mb-16">Features</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Ride Management",
-                desc: "Manage all your company rides in one place",
-              },
-              {
-                title: "Expense Reports",
-                desc: "Automated expense tracking and reporting",
-              },
-              {
-                title: "Budget Controls",
-                desc: "Set spending limits and manage budgets",
-              },
-              {
-                title: "Analytics",
-                desc: "Get insights into your mobility spending",
-              },
-            ].map((feature, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-orange-500/10 transition-all duration-300"

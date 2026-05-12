@@ -20,6 +20,8 @@ const RidePage = () => {
     },
   ];
 
+  const rides = ["UberX", "UberXL", "Uber Comfort", "Uber Premium"];
+
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
@@ -85,7 +87,7 @@ const RidePage = () => {
           <h2 className="text-5xl font-black text-center mb-16">Choose Your Ride</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {["UberX", "UberXL", "Uber Comfort", "Uber Premium"].map(
+            {rides.map(
               (type) => (
                 <div
                   key={type}

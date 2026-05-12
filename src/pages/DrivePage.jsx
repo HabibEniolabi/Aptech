@@ -20,6 +20,20 @@ const DrivePage = () => {
     },
   ];
 
+  const journeySteps = [
+    { step: "1", title: "Sign Up", desc: "Create your Uber driver account" },
+    {
+      step: "2",
+      title: "Get Verified",
+      desc: "Complete background checks",
+    },
+    {
+      step: "3",
+      title: "Start Earning",
+      desc: "Get requests and start earning",
+    },
+  ];
+
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
@@ -38,7 +52,9 @@ const DrivePage = () => {
               </div>
 
               <p className="text-lg text-white/60 max-w-xl leading-relaxed">
-                Be flexible with your time and use your own car to earn supplementary income. With Uber, you're in complete control of your schedule.
+                Be flexible with your time and use your own car to earn
+                supplementary income. With Uber, you're in complete control of
+                your schedule.
               </p>
 
               <button className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
@@ -57,7 +73,9 @@ const DrivePage = () => {
       {/* Benefits Section */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-5xl font-black text-center mb-16">Driver Benefits</h2>
+          <h2 className="text-5xl font-black text-center mb-16">
+            Driver Benefits
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
@@ -82,22 +100,12 @@ const DrivePage = () => {
       {/* Requirements */}
       <section className="py-20 lg:py-32 bg-gradient-to-b from-transparent to-purple-900/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <h2 className="text-5xl font-black text-center mb-16">Getting Started</h2>
+          <h2 className="text-5xl font-black text-center mb-16">
+            Getting Started
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Sign Up", desc: "Create your Uber driver account" },
-              {
-                step: "2",
-                title: "Get Verified",
-                desc: "Complete background checks",
-              },
-              {
-                step: "3",
-                title: "Start Earning",
-                desc: "Get requests and start earning",
-              },
-            ].map((item) => (
+            {journeySteps.map((item) => (
               <div key={item.step} className="text-center">
                 <div className="inline-block w-16 h-16 bg-purple-500/20 border-2 border-purple-500 rounded-full flex items-center justify-center mb-6">
                   <span className="text-3xl font-black text-purple-400">
