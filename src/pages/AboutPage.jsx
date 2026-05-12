@@ -41,6 +41,8 @@ const AboutPage = () => {
     { number: "6M+", label: "Restaurant Partners" },
   ];
 
+  const members = [1, 2, 3, 4, 5, 6, 7, 8]
+
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
@@ -251,7 +253,7 @@ const AboutPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((member) => (
+            {members.map((member) => (
               <div key={member} className="space-y-4 text-center">
                 <div className="w-full aspect-square bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/10 flex items-center justify-center hover:border-white/30 transition-all duration-300">
                   <Users size={48} className="text-white/30" />
