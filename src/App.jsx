@@ -1,9 +1,32 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import UberPage from "./pages/UberPage";
-import './App.css'
+import RidePage from "./pages/RidePage";
+import DrivePage from "./pages/DrivePage";
+import EatsPage from "./pages/EatsPage";
+import BusinessPage from "./pages/BusinessPage";
+import "./App.css";
 
 function App() {
-  return  <UberPage />;
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen bg-black text-white">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<UberPage />} />
+            <Route path="/ride" element={<RidePage />} />
+            <Route path="/drive" element={<DrivePage />} />
+            <Route path="/eats" element={<EatsPage />} />
+            <Route path="/business" element={<BusinessPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

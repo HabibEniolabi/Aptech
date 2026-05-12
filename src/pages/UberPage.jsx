@@ -1,16 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
-import Crud from "../components/Crud";
+import FeaturesSection from "../components/FeaturesSection";
 
 const UberPage = () => {
   return (
-    <main className="w-full">
-      <Navbar />
-      <div className="px-10 py-12">
-        <HeroSection />
-        {/* <Crud /> */}
-      </div>
+    <main className="w-full bg-black">
+      <HeroSection />
+      <FeaturesSection />
     </main>
   );
 };
