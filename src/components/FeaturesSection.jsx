@@ -1,5 +1,12 @@
 import React from "react";
-import { Car, Bike, Utensils, Briefcase, TrendingUp, ArrowRight } from "lucide-react";
+import {
+  Car,
+  Bike,
+  Utensils,
+  Briefcase,
+  TrendingUp,
+  ArrowRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const FeaturesSection = () => {
@@ -37,6 +44,12 @@ const FeaturesSection = () => {
       borderColor: "border-orange-500/30",
     },
   ];
+  const stats = [
+    { value: "70+", label: "Countries" },
+    { value: "6M+", label: "Active Users" },
+    { value: "1M+", label: "Drivers" },
+    { value: "24/7", label: "Customer Support" },
+  ];
 
   return (
     <section className="relative w-full py-20 lg:py-32 overflow-hidden">
@@ -60,11 +73,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Link
-                key={index}
-                to={feature.link}
-                className="group relative"
-              >
+              <Link key={index} to={feature.link} className="group relative">
                 <div
                   className={`h-full bg-gradient-to-br ${feature.color} backdrop-blur-sm border ${feature.borderColor} rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer overflow-hidden`}
                 >
@@ -106,12 +115,7 @@ const FeaturesSection = () => {
         {/* Stats Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 mt-20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { value: "70+", label: "Countries" },
-              { value: "6M+", label: "Active Users" },
-              { value: "1M+", label: "Drivers" },
-              { value: "24/7", label: "Customer Support" },
-            ].map((stat, index) => (
+            {stats.map((stat, index) => (
               <div key={index} className="text-center space-y-2">
                 <p className="text-4xl lg:text-5xl font-black text-white">
                   {stat.value}
