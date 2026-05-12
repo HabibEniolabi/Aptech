@@ -1,5 +1,11 @@
 import React from "react";
-import { Facebook, Twitter, Linkedin, Instagram, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,42 +15,42 @@ const Footer = () => {
     Company: [
       { label: "About Uber", href: "/about" },
       { label: "Our Offerings", href: "/" },
-      { label: "Newsroom", href: "#" },
-      { label: "Investors", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "Newsroom", href: "/" },
+      { label: "Investors", href: "/" },
+      { label: "Blog", href: "/" },
+      { label: "Careers", href: "/" },
     ],
     Products: [
       { label: "Ride", href: "/ride" },
       { label: "Drive", href: "/drive" },
       { label: "Uber Eats", href: "/eats" },
       { label: "Uber Business", href: "/business" },
-      { label: "Uber Freight", href: "#" },
-      { label: "Gift Cards", href: "#" },
+      { label: "Uber Freight", href: "/" },
+      { label: "Gift Cards", href: "/" },
     ],
     Global: [
-      { label: "Safety", href: "#" },
-      { label: "Community Guidelines", href: "#" },
-      { label: "Accessibility", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Cookies", href: "#" },
+      { label: "Safety", href: "/" },
+      { label: "Community Guidelines", href: "/" },
+      { label: "Accessibility", href: "/" },
+      { label: "Terms of Service", href: "/" },
+      { label: "Privacy Policy", href: "/" },
+      { label: "Cookies", href: "/" },
     ],
     Cities: [
-      { label: "New York", href: "#" },
-      { label: "Los Angeles", href: "#" },
-      { label: "Chicago", href: "#" },
-      { label: "London", href: "#" },
-      { label: "Paris", href: "#" },
-      { label: "Tokyo", href: "#" },
+      { label: "New York", href: "/" },
+      { label: "Los Angeles", href: "/" },
+      { label: "Chicago", href: "/" },
+      { label: "London", href: "/" },
+      { label: "Paris", href: "/" },
+      { label: "Tokyo", href: "/" },
     ],
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: FaFacebookF, href: "/", label: "Facebook" },
+    { icon: FaTwitter, href: "/", label: "Twitter" },
+    { icon: FaLinkedinIn, href: "/", label: "LinkedIn" },
+    { icon: FaInstagram, href: "/", label: "Instagram" },
   ];
 
   return (
@@ -60,9 +66,11 @@ const Footer = () => {
             >
               Uber
             </Link>
+
             <p className="text-sm text-white/60 mb-6 max-w-xs">
               Move the way you want. Request a ride, hop in, and go.
             </p>
+
             {/* Language Selector */}
             <div className="flex items-center gap-2 text-white/60 hover:text-white transition-colors cursor-pointer">
               <Globe size={16} />
@@ -76,6 +84,7 @@ const Footer = () => {
               <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-widest">
                 {category}
               </h3>
+
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
@@ -102,6 +111,7 @@ const Footer = () => {
               <div className="flex items-center gap-4">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon;
+
                   return (
                     <a
                       key={index}
@@ -119,6 +129,7 @@ const Footer = () => {
               <div className="flex items-center gap-3 border-l border-white/10 pl-8 md:pl-6">
                 <a
                   href="#"
+                  aria-label="Download on the App Store"
                   className="text-white/70 hover:text-white transition-colors text-xs"
                 >
                   <svg
@@ -129,8 +140,10 @@ const Footer = () => {
                     <path d="M17.05 13.5c-.91 0-1.64.33-2.15.98h-.02c-.37-.63-1.02-1.08-1.81-1.08-1.38 0-2.63 1.13-2.63 2.53s1.25 2.53 2.63 2.53c.79 0 1.44-.45 1.81-1.08h.02c.51.65 1.24.98 2.15.98 1.66 0 3.04-1.38 3.04-3.08 0-1.7-1.38-3.08-3.04-3.08M3.5 7.5h17v10h-17z" />
                   </svg>
                 </a>
+
                 <a
                   href="#"
+                  aria-label="Get it on Google Play"
                   className="text-white/70 hover:text-white transition-colors text-xs"
                 >
                   <svg
@@ -161,6 +174,7 @@ const Footer = () => {
             <div>
               Made with ❤️ | Last updated {new Date().toLocaleDateString()}
             </div>
+
             <div className="flex gap-4">
               <a href="#" className="hover:text-white/80 transition-colors">
                 Status
