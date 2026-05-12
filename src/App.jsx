@@ -7,6 +7,7 @@ import RidePage from "./pages/RidePage";
 import DrivePage from "./pages/DrivePage";
 import EatsPage from "./pages/EatsPage";
 import BusinessPage from "./pages/BusinessPage";
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/drive" element={<DrivePage />} />
           <Route path="/eats" element={<EatsPage />} />
           <Route path="/business" element={<BusinessPage />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
