@@ -9,7 +9,7 @@ const UberPage = () => {
       <Navbar />
       <div className="px-10 py-12">
         <HeroSection />
-        <Crud />
+        {/* <Crud /> */}
       </div>
     </main>
   );
