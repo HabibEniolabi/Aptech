@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Uber Eats", href: "/eats" },
   { label: "Business", href: "/business" },
   { label: "About", href: "/about" },
+  { label: "BMI", href: "/bmi" },
 ];
 
 const LANGUAGES = [

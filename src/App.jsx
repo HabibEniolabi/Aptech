@@ -8,6 +8,7 @@ import DrivePage from "./pages/DrivePage";
 import EatsPage from "./pages/EatsPage";
 import BusinessPage from "./pages/BusinessPage";
 import AboutPage from "./pages/AboutPage";
+import BmiPage from "./pages/BmiPage";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/eats" element={<EatsPage />} />
           <Route path="/business" element={<BusinessPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/bmi" element={<BmiPage />} />
         </Routes>
       </main>
       <Footer />
