@@ -47,12 +47,6 @@ const BmiPage = () => {
     setError('');
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      calculateBmi();
-    }
-  };
-
   return (
     <div className="w-full bg-black min-h-screen flex flex-col items-center justify-center gap-8 p-4">
       <div className="px-6 lg:px-10 text-center space-y-6 flex flex-col max-w-md">
@@ -67,7 +61,6 @@ const BmiPage = () => {
             type="number"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            onKeyPress={handleKeyPress}
             placeholder="Enter your weight (kg)"
             className="w-full p-3 border border-gray-300 rounded bg-white text-black placeholder-gray-500"
           />
@@ -75,7 +68,6 @@ const BmiPage = () => {
             type="number"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            onKeyPress={handleKeyPress}
             placeholder="Enter your height (cm)"
             className="w-full p-3 border border-gray-300 rounded bg-white text-black placeholder-gray-500"
           />
